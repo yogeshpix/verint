@@ -1,0 +1,16 @@
+:root {
+  --primary-color: #2a9d8f;
+  --secondary-color: #264653;
+  --black-color: #000000;
+  --white-color: #ffffff;
+
+  --font-size: 1rem;
+  --text-color: #333333;
+  --font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+    'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+
+  --spacing-small: 0.5rem;
+  --spacing-medium: 1rem;
+  --spacing-large: 1.5rem;
+  --spacing-xl: 2rem;
+}
