@@ -22,3 +22,18 @@ th {
   text-align: left;
   padding: 8px;
 }
+.text-center {
+  text-align: center;
+}
+.text-color-white {
+  color: var(--white-color);
+}
+.padding-1 {
+  padding: 1rem;
+}
+.margin-top-1 {
+  margin-top: 1rem;
+}
+.padding-bottom-1 {
+  padding-bottom: 1rem;
+}

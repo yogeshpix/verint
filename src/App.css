@@ -16,7 +16,7 @@
   overflow-x: auto;
 }
 .item-container tbody tr:hover {
-  background-color: #fff8f8;
+  background-color: var(--bg-hover);
 }
 .item-container th {
   background-color: var(--secondary-color);
@@ -36,11 +36,11 @@
   color: var(--primary-color);
 }
 .input-error {
-  border: 1px solid red;
+  border: 1px solid var(--error-color);
   font-size: 0.875rem;
 }
 .error-text {
-  color: red;
+  color: var(--error-color);
 }
 
 .btn {
@@ -52,20 +52,20 @@
   transition: all 0.2s ease-in-out;
 }
 .btn:hover {
-  background-color: #000;
+  background-color: var(--black-color);
   color: var(--white-color);
 }
 
 .btn-primary {
-  background-color: #f4a261;
+  background-color: var(--btn-primary);
   color: var(--white-color);
 }
 .btn-orange {
-  background-color: #e76f51;
+  background-color: var(--btn-orange);
   color: var(--white-color);
 }
 .btn-secondary {
-  background-color: #ffe5d9;
+  background-color: var(--btn-secondary);
   color: var(--text-color);
 }
 
@@ -85,7 +85,7 @@
 }
 
 .btn:disabled {
-  background-color: #ccc;
+  background-color: var(--border-color);
   cursor: not-allowed;
 }
 
@@ -105,8 +105,18 @@
 }
 .borderBox {
   margin: 1rem auto;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-color);
   padding: 1rem;
+}
+.form-container {
+  margin: '1rem auto 0';
+}
+.pageheader {
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+  text-align: center;
+  padding: 0.5rem;
+  margin: 1rem auto;
 }
 
 /* Tablets (below 1024px) */

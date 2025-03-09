@@ -2,11 +2,9 @@ const Mainheader = ({ title, backgroundColor }) => {
   return (
     <div>
       <h1
+        className='text-center padding-1 text-color-white '
         style={{
           backgroundColor: backgroundColor,
-          textAlign: 'center',
-          padding: '1rem',
-          color: 'var(--white-color)',
         }}
       >
         {title}

@@ -3,6 +3,12 @@
   --secondary-color: #264653;
   --black-color: #000000;
   --white-color: #ffffff;
+  --error-color: #ff0000;
+  --btn-primary: #f4a261;
+  --btn-orange: #e76f51;
+  --btn-secondary: #ffe5d9;
+  --bg-hover: #fff8f8;
+  --border-color: #ccc;
 
   --font-size: 1rem;
   --text-color: #333333;

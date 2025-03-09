@@ -9,23 +9,17 @@ const Confirmation = ({ orderId, navigate, itemId }) => {
     () => storeItem.find((item) => item.id === Number(itemId)),
     [storeItem, itemId]
   );
-  console.log(selectedItem);
   return (
-    <Container>
-      <h2 className={'pageheader'}>Order Summary</h2>
-      <div
-        className={'borderBox'}
-        style={{
-          textAlign: 'center',
-        }}
-      >
-        <p style={{ paddingBottom: '1rem' }}>
+    <Container textAlign='text-center'>
+      <h2 className='pageheader'>Order Summary</h2>
+      <div className='borderBox'>
+        <p className='padding-bottom-1'>
           Successfully order <strong>{selectedItem?.name}</strong> and your
-          order number is <strong>{orderId}</strong> and{' '}
-          <strong>${selectedItem?.actualPrice}</strong> charged to the credit
+          order number is <strong>{orderId}</strong> and
+          <strong> ${selectedItem?.actualPrice}</strong> charged to the credit
           card
         </p>
-        <Button type='button' size={'medium'} onClick={() => navigate(`/`)}>
+        <Button type='button' size='medium' onClick={() => navigate(`/`)}>
           Back to Home
         </Button>
       </div>

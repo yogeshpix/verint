@@ -1,6 +1,6 @@
 const OrderSummary = ({ selectedItem }) => {
   return (
-    <table style={{ padding: '1rem' }}>
+    <table className='padding-1'>
       <thead>
         <tr>
           <th scope='col'>Name</th>

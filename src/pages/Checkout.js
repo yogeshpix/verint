@@ -14,8 +14,8 @@ const Checkout = ({ itemId, navigate }) => {
   return (
     <div>
       <Container>
-        <h2 className={'pageheader'}>Checkout</h2>
-        <div className={'borderBox'}>
+        <h2 className='pageheader'>Checkout</h2>
+        <div className='borderBox'>
           <OrderSummary selectedItem={selectedItem} />
           <CheckoutForm itemId={itemId} navigate={navigate} />
         </div>

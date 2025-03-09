@@ -1,4 +1,4 @@
-export const generateStoreItems = (count) => {
+export const generateItems = (count) => {
   const itemList = [];
 
   for (let i = 0; i < count; i++) {

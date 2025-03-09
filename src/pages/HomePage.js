@@ -5,7 +5,7 @@ import ItemContainer from '../containers/ItemContainer';
 
 import { StoreContext } from '../StoreContext';
 
-const Store = ({ navigate }) => {
+const HomePage = ({ navigate }) => {
   const { storeItem, setStoreItem } = useContext(StoreContext);
   const [searchStr, setSearchStr] = useState('');
   const [sortOrder, setSortOrder] = useState('asc');
@@ -20,15 +20,14 @@ const Store = ({ navigate }) => {
   const sortItems = useCallback(
     (key, isNumeric = false) => {
       setStoreItem((prevItems) =>
-        [...prevItems].sort((a, b) =>
-          isNumeric
-            ? sortOrder === 'asc'
-              ? a[key] - b[key]
-              : b[key] - a[key]
-            : sortOrder === 'asc'
+        [...prevItems].sort((a, b) => {
+          if (isNumeric) {
+            return sortOrder === 'asc' ? a[key] - b[key] : b[key] - a[key];
+          }
+          return sortOrder === 'asc'
             ? a[key].localeCompare(b[key])
-            : b[key].localeCompare(a[key])
-        )
+            : b[key].localeCompare(a[key]);
+        })
       );
       setActiveSort(isNumeric);
       setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc');
@@ -45,14 +44,10 @@ const Store = ({ navigate }) => {
           onSortByName={() => sortItems('name')}
           onSortByPrice={() => sortItems('actualPrice', true)}
         />
-        <ItemContainer
-          items={filteredItems}
-          activeSort={activeSort}
-          navigate={navigate}
-        />
+        <ItemContainer items={filteredItems} navigate={navigate} />
       </Container>
     </div>
   );
 };
 
-export default React.memo(Store);
+export default React.memo(HomePage);

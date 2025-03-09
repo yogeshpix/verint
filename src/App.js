@@ -8,7 +8,7 @@ const App = () => {
     <StoreProvider>
       <Mainheader
         title={'Store Front Application'}
-        backgroundColor={'#2a9d8f'}
+        backgroundColor={'var(--primary-color)'}
       />
       <Router />
     </StoreProvider>

@@ -1,15 +1,10 @@
 import { useEffect, useState } from 'react';
 import Checkout from './pages/Checkout';
 import Confirmation from './pages/Confirmation';
-import Store from './pages/Store';
+import HomePage from './pages/HomePage';
 
 const Router = () => {
   const [route, setRoute] = useState(window.location.pathname);
-  useEffect(() => {
-    const handlePopState = () => setRoute(window.location.pathname);
-    window.addEventListener('popstate', handlePopState);
-    return () => window.removeEventListener('popstate', handlePopState);
-  }, []);
 
   const navigate = (path) => {
     window.history.pushState({}, '', path);
@@ -30,8 +25,15 @@ const Router = () => {
       />
     );
   } else {
-    PageComponent = <Store navigate={navigate} />;
+    PageComponent = <HomePage navigate={navigate} />;
   }
+
+  useEffect(() => {
+    const handlePopState = () => setRoute(window.location.pathname);
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
   return <>{PageComponent}</>;
 };
 

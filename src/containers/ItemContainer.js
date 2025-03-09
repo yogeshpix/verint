@@ -1,29 +1,19 @@
 import Button from '../components/Button';
 import PageHeader from './PageHeader';
 
-const ItemContainer = ({ items, navigate, activeSort }) => (
+const ItemContainer = ({ items, navigate }) => (
   <div className='item-container'>
     {items.length > 0 && (
-      <table aria-label='Store Items' style={{ marginTop: '1rem' }}>
+      <table aria-label='Store Items' className='margin-top-1'>
         <thead>
           <tr>
             <th scope='col' style={{ width: '2rem' }}>
               Image
             </th>
-            <th
-              scope='col'
-              style={{ backgroundColor: !activeSort ? '#f4a261' : '' }}
-            >
-              Name
-            </th>
+            <th scope='col'>Name</th>
             <th scope='col'>Description</th>
             <th scope='col'>Suggested Price</th>
-            <th
-              scope='col'
-              style={{ backgroundColor: activeSort ? '#f4a261' : '' }}
-            >
-              Actual Price
-            </th>
+            <th scope='col'>Actual Price</th>
             <th scope='col'>Discount</th>
             <th scope='col'>Action</th>
           </tr>
@@ -45,8 +35,8 @@ const ItemContainer = ({ items, navigate, activeSort }) => (
               <td>{item.discount}%</td>
               <td style={{ width: '1rem' }}>
                 <Button
-                  variant={'orange'}
-                  size={'medium'}
+                  variant='orange'
+                  size='medium'
                   onClick={() => navigate(`/checkout/${item.id}`)}
                 >
                   Buy

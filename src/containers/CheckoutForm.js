@@ -36,10 +36,7 @@ const CheckoutForm = ({ itemId, navigate }) => {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      style={{ margin: '1rem auto 0', textAlign: 'center' }}
-    >
+    <form onSubmit={handleSubmit} className='form-container text-center'>
       <fieldset style={{ padding: '1rem' }}>
         <legend>Billing Details</legend>
         <Input
